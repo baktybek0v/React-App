@@ -1,0 +1,149 @@
+.options {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 100vh;
+    
+    background: rgb(0,0,0, 0.9);
+    padding: 18px 6px;
+   
+    font: 18px 'Cambria';
+    color: #fff;
+    transition: all .5s ease-in-out;
+  }
+  
+  
+  .options > * {
+    margin-bottom: 8px;
+  }
+  
+  .options > h1,
+  .options > h2,
+  .options > h3,
+  .options > h4
+  {
+    margin-bottom: 24px;
+  }
+  
+  
+  .options.open {left: 0;}
+  
+  .options__badge {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 40px;
+  
+    background: rgba(0,0,0,0.8);
+    color: #2b8bc6;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  
+    line-height: 40px;
+    padding-left: 4px;
+  }
+  
+  .options__icon  {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+  }
+  
+  .options.open .options__icon {
+    animation: none;
+  }
+  
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }}
+  
+  
+  /* form-check [START] */
+  
+  .options__form-check{
+    transform: scale(0.75);
+    margin-left: 8px;
+  }
+  
+    .form-check__button
+    {
+        border: 2px solid transparent;
+        position: relative;
+        width: 74px;
+        height: 36px;
+        top: 4px;
+        overflow: hidden;
+        border-radius: 100px;
+        box-shadow: 3px 0 3px #2b8bc6,
+                -3px 0 4px #2b8bc6,
+                0px -4px 9px #2b8bc6,
+                0px 4px 7px #2b8bc6;
+    }
+  
+    .form-check__checkbox
+    {
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        z-index: 3;
+    }
+  
+    .form_check__knobs{z-index: 2;}
+  
+    .form-check__layer
+    {
+        width: 100%;
+        background-color: #2b8bc6;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+  
+    .form-check__button .form-check__knobs:before
+    {   
+        content: '\2718';
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        width: 20px;
+        height: 10px;
+        color: #fff;
+        text-align: center;
+        line-height: 0.8;
+        font-weight: bold;
+        padding: 9px 4px;
+        background-color: #f44336;
+        border-radius: 50%;
+        transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    }
+  
+    .form-check__button .form-check__checkbox:checked + .form-check__knobs:before
+    {
+        left: 42px;
+        background-color: #6ad810;
+    }
+  
+    .form-check .form-check__button .form-check__checkbox:checked + .form-check__knobs:before {
+      content: '\2714';
+    }
+  
+  
+    .form-check__button .form-check__checkbox:checked ~ .form-check__layer
+    {
+        background-color: #fcebeb;
+    }
+  
+    .form-check__button .form-check__knobs,
+    .form-check__button .form-check__knobs:before,
+    .form-check__button .form-check__layer
+    {
+        transition: 0.3s ease all;
+    }

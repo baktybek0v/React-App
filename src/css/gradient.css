@@ -1,0 +1,65 @@
+
+/* Линейные градиенты для фона [START] */ 
+.bg-gradient.sea-blue {
+    background: #2b5876;  
+    background: -webkit-linear-gradient(to top, #4e4376, rgb(43, 88, 118)); 
+    background: linear-gradient(to top, #4e4376, #2b5876);
+}
+
+.bg-gradient.skyline {
+    background: #2b5876;  
+    background: -webkit-linear-gradient(to top, #4e4376, #2b5876); 
+    background: linear-gradient(to top, rgb(78, 67, 118), #2b5876);
+}
+
+.bg-gradient.lawrencuium {
+    background: #0f0c29; 
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+}
+
+.bg-gradient.dark-ocean {
+    background: #373B44; 
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44); 
+    background: linear-gradient(to right, #4286f4, #373B44);
+}
+
+.bg-gradient.ocean {
+    background: #000046; 
+    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  
+    background: linear-gradient(to top, #1CB5E0, #000046); 
+}
+
+.bg-gradient.frost {
+    background: #000428;  
+    background: -webkit-linear-gradient(to top, #004e92, #000428);  
+    background: linear-gradient(to top, #004e92, #000428);
+}
+
+.bg-gradient.royal {
+    background: #141E30; 
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  
+    background: linear-gradient(to right, #243B55, #141E30); 
+}
+
+.bg-gradient.dark-sky {
+    background: #4B79A1;  
+    background: -webkit-linear-gradient(to right, #283E51, #4B79A1); 
+    background: linear-gradient(to right, #283E51, #4B79A1); 
+}
+
+.bg-gradient.turquoise {
+    background: #136a8a;  
+    background: -webkit-linear-gradient(to bottom, #267871, #136a8a);  
+    background: linear-gradient(to bottom, #267871, #136a8a); 
+}
+
+
+.bg-gradient.ash {
+    background: #606c88;  
+    background: -webkit-linear-gradient(to bottom, #3f4c6b, #606c88);  
+    background: linear-gradient(to bottom, #3f4c6b, #606c88);
+}
+
+
+/* Линейные градиенты  [END] */ 
