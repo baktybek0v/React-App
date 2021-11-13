@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/baktybek0v/React-App/static/css/main.1b09ff32.chunk.css",
+    "main.js": "/baktybek0v/React-App/static/js/main.dd57126c.chunk.js",
+    "main.js.map": "/baktybek0v/React-App/static/js/main.dd57126c.chunk.js.map",
+    "runtime-main.js": "/baktybek0v/React-App/static/js/runtime-main.b80cb63c.js",
+    "runtime-main.js.map": "/baktybek0v/React-App/static/js/runtime-main.b80cb63c.js.map",
+    "static/js/2.345ce968.chunk.js": "/baktybek0v/React-App/static/js/2.345ce968.chunk.js",
+    "static/js/2.345ce968.chunk.js.map": "/baktybek0v/React-App/static/js/2.345ce968.chunk.js.map",
+    "static/js/3.3d984c8c.chunk.js": "/baktybek0v/React-App/static/js/3.3d984c8c.chunk.js",
+    "static/js/3.3d984c8c.chunk.js.map": "/baktybek0v/React-App/static/js/3.3d984c8c.chunk.js.map",
+    "index.html": "/baktybek0v/React-App/index.html",
+    "static/css/main.1b09ff32.chunk.css.map": "/baktybek0v/React-App/static/css/main.1b09ff32.chunk.css.map",
+    "static/js/2.345ce968.chunk.js.LICENSE.txt": "/baktybek0v/React-App/static/js/2.345ce968.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/baktybek0v/React-App/static/media/fridge.3b2e9fa5.jpg",
+    "static/media/Model.css": "/baktybek0v/React-App/static/media/magnifient.1404b1b6.png",
+    "static/media/model1.98e527b7.png": "/baktybek0v/React-App/static/media/model1.98e527b7.png",
+    "static/media/model2.eff68be5.png": "/baktybek0v/React-App/static/media/model2.eff68be5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b80cb63c.js",
+    "static/js/2.345ce968.chunk.js",
+    "static/css/main.1b09ff32.chunk.css",
+    "static/js/main.dd57126c.chunk.js"
+  ]
+}
