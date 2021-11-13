@@ -1,7 +1,7 @@
 import React from "react";
 
 // Font Awesome 5
-import { faBackward, faChessKing, faInfo, faQuestion } from "@fortawesome/free-solid-svg-icons";
+import { faBackward, faQuestion } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 

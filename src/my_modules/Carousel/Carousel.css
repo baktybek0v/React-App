@@ -1,0 +1,92 @@
+
+.container-carousel {
+    margin: 0 auto;
+    width: 150px;
+    height: 200px;
+    /* 250px 200px */
+    position: relative;
+    perspective: 600px;
+    padding-top: 50px;
+    transform: scale(1.8);
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.carousel .item {
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+.carousel .a {transform: rotateY(0deg)   translateZ(150px);}
+.carousel .b {transform: rotateY(60deg)  translateZ(150px);}
+.carousel .c {transform: rotateY(120deg) translateZ(150px);}
+.carousel .d {transform: rotateY(180deg) translateZ(150px);}
+.carousel .e {transform: rotateY(240deg) translateZ(150px);}
+.carousel .f {transform: rotateY(300deg) translateZ(150px);}
+
+.carousel-next,
+.carousel-prev {
+    position: fixed;
+    top: 50%;
+    -ms-transform-origin-y: -50%;
+    -webkit-transform-origin-y: -50%;
+    padding: 6px 12px;
+    font-size: 36px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    font-weight: bold;
+}
+
+.carousel-prev {left: 1.5em;}
+.carousel-next {right: 1.5em;}
+
+.carousel-prev:hover,
+.carousel-next:hover{
+    text-shadow: 4px 4px 6px rgb(223, 33, 33),
+                 0 4px 6px rgb(223, 33, 33),
+                 -4px -4px 6px rgb(32, 7, 175),
+                 0 -4px 6px rgb(32, 7, 175);
+
+}
+
+.carousel-prev:hover::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 4em;
+    height: 100%;
+    /* box-shadow: inset 3px 0 50px 5px #000; */
+    animation: fadeIn 0.5s ease 1;
+    background: #000;
+    opacity: .3;
+}
+
+.carousel-next:hover::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 4em;
+    height: 100%;
+    /* box-shadow: inset 3px 0 50px 5px #000; */
+    animation: fadeIn 0.5s ease 1;
+    background: #000;
+    opacity: .3;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: .3;}    
+}
