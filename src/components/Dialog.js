@@ -82,6 +82,8 @@ class Dialog extends React.Component {
 
         // после возвращение на назад удалять текущий шаг состояние stage
         state.transitions.splice(state.transitions.length - 1, 1);
+
+        this.forceUpdate();
     }   
 
     next = (answerIndex) => {
@@ -102,6 +104,7 @@ class Dialog extends React.Component {
             let index = nextStages[answerIndex];
             state.displayedResult = this.getText(index);
             state.solver = 'Решатель:';
+            this.forceUpdate();
             return;
         }
 
@@ -111,6 +114,7 @@ class Dialog extends React.Component {
         state.displayedQuestion = this.getText(state.stage);
         state.displayedAnswers  = this.getAnswers(state.stage)
 
+        this.forceUpdate();
     }
 
     show = () => {
@@ -168,6 +172,8 @@ class Dialog extends React.Component {
                 },
             ]
         );
+
+        this.forceUpdate();
     }
 
   
@@ -192,40 +198,37 @@ class Dialog extends React.Component {
                                 state.displayedAnswers.map((item, index) => {
                                     return (
                                         <React.Fragment key={index}>
-                                            <a
+                                            <span
                                                 data-tip="нажмите кнопку помощь (справо) если вы затрудняетесь с выбором"
                                                 className="item"
-                                                href="#"
                                                 onClick={() => this.next(index)}
                                             >
                                                 <i></i>  <i></i>  <i></i>  <i></i>
                                                 <span className="item">{item}</span>
-                                            </a>
+                                            </span>
                                         </React.Fragment>
                                     );
                                 })
                             }
                         </div>
                         <div className="answer__help neon-btn">
-                            <a
+                            <span
                                 className="item"
-                                href="#"
                                 data-tip="Вернуться на один шаг назад"
                                 onClick={this.back}
                             >
                                 <i></i> <i></i> <i></i> <i></i>
                                 <span><FontAwesomeIcon icon={faBackward} /></span>
-                            </a>
+                            </span>
                          
-                            <a
+                            <span
                                 className="item"
-                                href="#"
                                 data-tip="Нажмите если вы затрудняетесь с выбором"
                                 onClick={this.show}
                             >
                                 <i></i> <i></i> <i></i> <i></i>
                                 <span><FontAwesomeIcon icon={faQuestion} /></span>
-                            </a>
+                            </span>
                         </div>
                     </div>
                 

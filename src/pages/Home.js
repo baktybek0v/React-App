@@ -19,7 +19,7 @@ const Home = () => {
                                 <div className="location">Экспертная Система</div>
                                 <div className="title">Как выбрать</div>
                                 <div className="author text-upper-case text-danger">Фотоаппарат</div>
-                                <a className="link" href="./model1"> Перейти </a>
+                                <a className="link" href="./#/model1"> Перейти </a>
                             </div>
                         </div>
                         <div className="panel">
@@ -28,7 +28,7 @@ const Home = () => {
                                 <div className="location">Экспертная Система</div>
                                 <div className="title">Как выбрать</div>
                                 <div className="author text-upper-case text-danger">Холодильник</div>
-                                <a className="link" href="./model2"> Перейти </a>
+                                <a className="link" href="./#/model2"> Перейти </a>
                             </div>
                         </div>
                         <div className="panel">
@@ -37,7 +37,7 @@ const Home = () => {
                                 <div className="location">Экспертная Система</div>
                                 <div className="title">Как выбрать</div>
                                 <div className="author text-upper-case text-danger">Язык Программирование</div>
-                                <a className="link" href="./model3"> Перейти </a>
+                                <a className="link" href="./#/model3"> Перейти </a>
                             </div>
                         </div>
 

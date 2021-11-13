@@ -66,6 +66,10 @@ class Navbar extends React.Component {
     }
 
 
+    refresh = () => {
+        window.location.reload();
+    }
+
     open = () => {
         const modal = document.querySelector(".modal");
         const modalContainer = document.querySelector(".modal-container");
@@ -301,10 +305,10 @@ class Navbar extends React.Component {
                                 <i></i>  <i></i> <i></i>  <i></i>
                                 <span><FontAwesomeIcon icon={faSitemap} /></span>
                             </span>
-                            <a className="item-2" href={'/model'+this.index} data-tip="Сбросит всё и начать с начала">
+                            <span className="item-2" onClick={this.refresh} data-tip="Сбросит всё и начать с начала">
                                 <i></i>  <i></i> <i></i>  <i></i>
                                 <span><FontAwesomeIcon icon={faUndo} /></span>
-                            </a>
+                            </span>
                             <a className="item-3" href="/" data-tip="Выйти из ЭС">
                                 <i></i>  <i></i> <i></i>  <i></i>
                                 <span><FontAwesomeIcon icon={faSignOutAlt} /></span>
