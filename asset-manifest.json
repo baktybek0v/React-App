@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/React-App/static/css/main.4cc4f840.chunk.css",
-    "main.js": "/React-App/static/js/main.413ab5e2.chunk.js",
-    "main.js.map": "/React-App/static/js/main.413ab5e2.chunk.js.map",
-    "runtime-main.js": "/React-App/static/js/runtime-main.1665adac.js",
-    "runtime-main.js.map": "/React-App/static/js/runtime-main.1665adac.js.map",
-    "static/js/2.8b58ec4c.chunk.js": "/React-App/static/js/2.8b58ec4c.chunk.js",
-    "static/js/2.8b58ec4c.chunk.js.map": "/React-App/static/js/2.8b58ec4c.chunk.js.map",
-    "static/js/3.3d984c8c.chunk.js": "/React-App/static/js/3.3d984c8c.chunk.js",
-    "static/js/3.3d984c8c.chunk.js.map": "/React-App/static/js/3.3d984c8c.chunk.js.map",
-    "index.html": "/React-App/index.html",
-    "static/css/main.4cc4f840.chunk.css.map": "/React-App/static/css/main.4cc4f840.chunk.css.map",
-    "static/js/2.8b58ec4c.chunk.js.LICENSE.txt": "/React-App/static/js/2.8b58ec4c.chunk.js.LICENSE.txt",
-    "static/media/Home.css": "/React-App/static/media/fridge.3b2e9fa5.jpg",
-    "static/media/Model.css": "/React-App/static/media/magnifient.1404b1b6.png",
-    "static/media/model1.98e527b7.png": "/React-App/static/media/model1.98e527b7.png",
-    "static/media/model2.eff68be5.png": "/React-App/static/media/model2.eff68be5.png"
+    "main.css": "/static/css/main.4dc1cc2b.chunk.css",
+    "main.js": "/static/js/main.0151e139.chunk.js",
+    "main.js.map": "/static/js/main.0151e139.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9331953b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9331953b.js.map",
+    "static/js/2.8b58ec4c.chunk.js": "/static/js/2.8b58ec4c.chunk.js",
+    "static/js/2.8b58ec4c.chunk.js.map": "/static/js/2.8b58ec4c.chunk.js.map",
+    "static/js/3.3d984c8c.chunk.js": "/static/js/3.3d984c8c.chunk.js",
+    "static/js/3.3d984c8c.chunk.js.map": "/static/js/3.3d984c8c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4dc1cc2b.chunk.css.map": "/static/css/main.4dc1cc2b.chunk.css.map",
+    "static/js/2.8b58ec4c.chunk.js.LICENSE.txt": "/static/js/2.8b58ec4c.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/static/media/fridge.3b2e9fa5.jpg",
+    "static/media/Model.css": "/static/media/magnifient.1404b1b6.png",
+    "static/media/model1.98e527b7.png": "/static/media/model1.98e527b7.png",
+    "static/media/model2.eff68be5.png": "/static/media/model2.eff68be5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1665adac.js",
+    "static/js/runtime-main.9331953b.js",
     "static/js/2.8b58ec4c.chunk.js",
-    "static/css/main.4cc4f840.chunk.css",
-    "static/js/main.413ab5e2.chunk.js"
+    "static/css/main.4dc1cc2b.chunk.css",
+    "static/js/main.0151e139.chunk.js"
   ]
 }
