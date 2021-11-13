@@ -26,7 +26,7 @@ class Options extends React.Component {
                     <span className="options__icon"> <FontAwesomeIcon icon={faCog} /></span>
                 </div>
     
-                <h2>Параметры Экспертной Системы</h2>
+                <h2>Параметры</h2>
     
                 <div className="flex-column">
 
