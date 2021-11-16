@@ -1,5 +1,6 @@
 function carousel() {
-    window.onload = function () {
+
+    window.addEventListener('DOMContentLoaded', function() {
         let currdeg  = 0;
 
         let prev = document.querySelector('.carousel-prev');
@@ -20,8 +21,8 @@ function carousel() {
             }
         }
 
-    }
+    }, false);
 }
 
-carousel();
+
 export {carousel};

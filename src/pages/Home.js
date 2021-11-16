@@ -9,9 +9,10 @@ import ReactTooltip from 'react-tooltip';        // Module Tooltip
 // carousel module
 import "../my_modules/Carousel/Carousel.css";
 import {carousel} from "../my_modules/Carousel/Carousel";
+carousel();
+
 
 // Font Awesome 5
-
 import { faArrowAltCircleLeft, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -24,8 +25,8 @@ const Home = () => {
             <div className="bg-gradient royal h-vh-100 w-100 pt-2">
 
                 <div className="flex justify-center align-center mb-5">
-                    <h2 className="text-center mr-7"><x-sign>ЭКСПЕРТНЫЕ СИСТЕМЫ</x-sign></h2>
-                    <div class="neon-btn max-w-20">
+                    <h2 className="text-center"><x-sign>ЭКСПЕРТНЫЕ СИСТЕМЫ</x-sign></h2>
+                    {/* <div className="neon-btn max-w-20">
                          <a 
                             className="item"
                             data-tip="показать оставшеюся часть ЭС"
@@ -35,7 +36,7 @@ const Home = () => {
                             <i></i>  <i></i> <i></i>  <i></i>
                             <span>ЧАСТЬ #2</span>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
 
 

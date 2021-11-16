@@ -1,5 +1,8 @@
 import React from "react";
 
+// css
+import '../css/indication.css';
+
 // Font Awesome 5
 import { faBackward, faQuestion } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,8 +40,10 @@ class Dialog extends React.Component {
         state = {
             stage: 0,       // текущий состояние
             transitions: [],
+            indication: [0],
             displayedQuestion: this.getText(0),   // вопрос текущего состояиние
             displayedAnswers: this.getAnswers(0), // варианты ответов вопроса текущего состояние
+            displayedAnswerBlocks: this.getAnswersBlocks(0),
             displayedResult: "",
             solver: "",
         };
@@ -50,6 +55,10 @@ class Dialog extends React.Component {
 
     getAnswers = (index) => {
         return this.table2[index].answerList.map( (item) => item.answer);       
+    }
+
+    getAnswersBlocks = (index) => {
+        return this.table2[index].answerList.map( (item) => item.block);       
     }
 
     getTitle = (index) => {
@@ -79,8 +88,10 @@ class Dialog extends React.Component {
         state.stage             = state.transitions[state.transitions.length - 1];
         state.displayedQuestion = this.getText(state.stage);
         state.displayedAnswers  = this.getAnswers(state.stage);
+        state.displayedAnswerBlocks = this.getAnswersBlocks(state.stage);
 
         // после возвращение на назад удалять текущий шаг состояние stage
+        state.indication = state.transitions.length > 0 ? state.transitions.slice() : [0];
         state.transitions.splice(state.transitions.length - 1, 1);
 
         this.forceUpdate();
@@ -102,22 +113,34 @@ class Dialog extends React.Component {
         // если конец
         if (nextCommands[answerIndex][2] === 1) {
             let index = nextStages[answerIndex];
+
+            state.indication = state.transitions.slice(); 
+            state.indication.push(state.stage);
+            state.indication.push(index);
+
             state.displayedResult = this.getText(index);
             state.solver = 'Решатель:';
+
+
             this.forceUpdate();
             return;
         }
 
         
-        state.transitions.push(state.stage);    
+        state.transitions.push(state.stage);
+        state.indication = state.transitions.slice();    
+        state.indication.push(nextStages[answerIndex]);
+        
         state.stage             = nextStages[answerIndex];
         state.displayedQuestion = this.getText(state.stage);
         state.displayedAnswers  = this.getAnswers(state.stage)
+        state.displayedAnswerBlocks = this.getAnswersBlocks(state.stage);
 
         this.forceUpdate();
     }
 
     show = () => {
+
 
         function contentHeader(mainHead = ". . .", mainDes) {
             return (`
@@ -181,6 +204,21 @@ class Dialog extends React.Component {
         return (
             <React.Fragment>
                 <ReactTooltip />
+                
+                <div className="indication">
+                    <span className="bold mr-2"> Индикация </span>
+                    {   
+                        state.indication.map( (item, index) => {
+                            return (
+                                <React.Fragment key={index}>
+                                    <div className="indication-item">{item}</div>
+                                </React.Fragment>
+                            );
+                        })
+                       
+                    }   
+                </div>
+
 
                 <div className="dialog" id="dialog">
 
@@ -194,13 +232,13 @@ class Dialog extends React.Component {
                     <div id="answer" className="answer flex">
                         <div className="answer__list neon-btn">
                             {
-                                
                                 state.displayedAnswers.map((item, index) => {
+                                    let n = state.displayedAnswerBlocks
                                     return (
                                         <React.Fragment key={index}>
                                             <span
                                                 data-tip="нажмите кнопку помощь (справо) если вы затрудняетесь с выбором"
-                                                className="item"
+                                                className={"item n" + n[index]}
                                                 onClick={() => this.next(index)}
                                             >
                                                 <i></i>  <i></i>  <i></i>  <i></i>
@@ -245,5 +283,12 @@ class Dialog extends React.Component {
         );
     }
 }
+
+
+
+window.onload = function() {
+    document.documentElement.style.setProperty('--index1', '0');
+    document.documentElement.style.setProperty('--index2', '2');
+};
 
 export { Dialog };
